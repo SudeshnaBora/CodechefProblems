@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main(void)
+{
+    int t,n,count;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%d",&n);
+        count=0;
+        while(n)
+        {
+            if(n>=100)
+            {
+              count+=n/100;
+              n=n%100;
+            }
+            if(n>=50)
+            {
+                count+=n/50;
+                n=n%50;
+            }
+            if(n>=10)
+            {
+                count+=n/10;
+                n=n%10;
+            }
+            if(n>=5)
+            {
+                count+=n/5;
+                n=n%5;
+            }
+            if(n>=2)
+            {
+                count+=n/2;
+                n=n%2;
+            }
+            else
+            {
+                count+=n;
+                n=0;
+            }
+        }
+        printf("%d\n",count);
+    }
+    return 0;
+}
